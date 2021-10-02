@@ -9,10 +9,6 @@ import net.dv8tion.jda.api.entities.Activity;
 import javax.security.auth.login.LoginException;
 
 public class Asobi {
-    // Asobi - ODkzODk1OTMyNDYxMDg4ODM5.YViHdg.-q52yGqRQql4T4xoHyVubXOmEZQ
-    // BoonBot - ODkzODk4MTUxNDYxNzg1NjAx.YViJhw.D1pqNGhqNnEIr569sMbuwCUx_gA
-    // NonBot - ODkzODk4NTMwOTc5MjA5Mjg3.YViJ4Q.f81UmfIJyGLXWlA6LUGQQ0J69Ek
-    // BirdBot - ODkzODk4NzU2MDA3Nzg4NjA0.YViKFw.fkEa_WLkVoNIIUS3FoRfxajHVg8
 
     public static JDA jda;
 
