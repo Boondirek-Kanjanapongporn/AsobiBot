@@ -11,11 +11,14 @@ import javax.security.auth.login.LoginException;
 public class Asobi {
 
     public static JDA jda;
+    public static String PREFIX = "aso-";
 
     public static void main(String[] args) throws LoginException {
 
         jda = JDABuilder.createDefault("").build();
-        jda.getPresence().setStatus(OnlineStatus.IDLE);
-        jda.getPresence().setActivity(Activity.watching("Pornhub"));
+        jda.getPresence().setStatus(OnlineStatus.ONLINE);
+        jda.getPresence().setActivity(Activity.watching("Boring Comedy Shows"));
+
+        jda.addEventListener(new Commands());
     }
 }
