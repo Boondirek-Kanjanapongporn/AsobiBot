@@ -15,7 +15,7 @@ public class Asobi {
 
     public static void main(String[] args) throws LoginException {
 
-        jda = JDABuilder.createDefault("ODkzODk4MTUxNDYxNzg1NjAx.YViJhw.JYlLo4-ptp5ayQaD1YvA38yFiyw").build();
+        jda = JDABuilder.createDefault("").build();
         jda.getPresence().setStatus(OnlineStatus.ONLINE);
         jda.getPresence().setActivity(Activity.watching("Boring Comedy Shows"));
 
