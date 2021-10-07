@@ -1,10 +1,12 @@
 package com.Asobi;
 
+import Commands.*;
 import net.dv8tion.jda.api.AccountType;
 import net.dv8tion.jda.api.JDA;
 import net.dv8tion.jda.api.JDABuilder;
 import net.dv8tion.jda.api.OnlineStatus;
 import net.dv8tion.jda.api.entities.Activity;
+import net.dv8tion.jda.api.interactions.commands.Command;
 
 import javax.security.auth.login.LoginException;
 
@@ -19,6 +21,8 @@ public class Asobi {
         jda.getPresence().setStatus(OnlineStatus.ONLINE);
         jda.getPresence().setActivity(Activity.watching("Boring Comedy Shows"));
 
-        jda.addEventListener(new Commands());
+        jda.addEventListener(new Clear());
+        jda.addEventListener(new Hello());
+        jda.addEventListener(new Info());
     }
 }
