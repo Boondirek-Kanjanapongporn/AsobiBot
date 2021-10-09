@@ -21,7 +21,7 @@ public class Info extends ListenerAdapter {
             info.setColor(0xe6e6e6);
             info.setFooter("All Copyrights reserved © 2021");
             event.getChannel().sendTyping().queue();
-            event.getChannel().sendMessage(info.build()).queue();
+            event.getChannel().sendMessageEmbeds(info.build()).queue();
             info.clear();
         }
     }
