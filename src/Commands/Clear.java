@@ -18,7 +18,7 @@ public class Clear extends ListenerAdapter {
                 error.setColor(0xEED202);
                 error.setTitle("⚠  Specify Amount to Delete");
                 error.setDescription("Try: '" + Asobi.PREFIX + "clear [# of messages]'");
-                event.getChannel().sendMessage(error.build()).queue();
+                event.getChannel().sendMessageEmbeds(error.build()).queue();
             }
             else {
                 try{
@@ -29,7 +29,7 @@ public class Clear extends ListenerAdapter {
                     EmbedBuilder success = new EmbedBuilder();
                     success.setColor(0x22ff2a);
                     success.setTitle("✅  Successfully Deleted " + args[1] + " Messages!!!");
-                    event.getChannel().sendMessage(success.build()).queue();
+                    event.getChannel().sendMessageEmbeds(success.build()).queue();
                 }
                 catch (Exception e){
                     if(e.toString().startsWith("java.lang.IllegalArgumentException: Message retrieval")){
@@ -38,7 +38,7 @@ public class Clear extends ListenerAdapter {
                         error.setColor(0xff3923);
                         error.setTitle("⛔  Too Many Messages Selected");
                         error.setDescription("Between 1-100 messages can be deleted at a time...");
-                        event.getChannel().sendMessage(error.build()).queue();
+                        event.getChannel().sendMessageEmbeds(error.build()).queue();
                     }
                     else{
                         // Messages too old
@@ -46,7 +46,7 @@ public class Clear extends ListenerAdapter {
                         error.setColor(0xff3923);
                         error.setTitle("⛔ Selected Messages Are Too Old!!");
                         error.setDescription("Messages older than 2 weeks cannot be deleted");
-                        event.getChannel().sendMessage(error.build()).queue();
+                        event.getChannel().sendMessageEmbeds(error.build()).queue();
                     }
                 }
             }

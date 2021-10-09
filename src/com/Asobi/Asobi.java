@@ -1,12 +1,13 @@
 package com.Asobi;
 
 import Commands.*;
-import net.dv8tion.jda.api.AccountType;
+import Events.GuildMemberJoin;
+import Events.GuildMemberRemove;
+import Events.GuildMessageReactionAdd;
 import net.dv8tion.jda.api.JDA;
 import net.dv8tion.jda.api.JDABuilder;
 import net.dv8tion.jda.api.OnlineStatus;
 import net.dv8tion.jda.api.entities.Activity;
-import net.dv8tion.jda.api.interactions.commands.Command;
 
 import javax.security.auth.login.LoginException;
 
@@ -17,12 +18,16 @@ public class Asobi {
 
     public static void main(String[] args) throws LoginException {
 
-        jda = JDABuilder.createDefault("").build();
+        jda = JDABuilder.createDefault("ODkzODk4MTUxNDYxNzg1NjAx.YViJhw.5ityUR3qjunoQTbqD0RU2f1JR0I").build();
         jda.getPresence().setStatus(OnlineStatus.ONLINE);
-        jda.getPresence().setActivity(Activity.watching("Boring Comedy Shows"));
+        jda.getPresence().setActivity(Activity.playing("With Your Emotions"));
 
         jda.addEventListener(new Clear());
         jda.addEventListener(new Hello());
         jda.addEventListener(new Info());
+        jda.addEventListener(new Secret());
+        jda.addEventListener(new GuildMemberJoin());
+        jda.addEventListener(new GuildMemberRemove());
+        jda.addEventListener(new GuildMessageReactionAdd());
     }
 }
